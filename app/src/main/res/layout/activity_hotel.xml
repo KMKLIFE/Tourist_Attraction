@@ -34,7 +34,7 @@
             android:orientation="vertical">
 
             <CheckBox
-                android:id="@+id/checkBox1"
+                android:id="@+id/checkss"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1.신라 스테이 호텔" />
@@ -58,37 +58,34 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView56"
+                        android:id="@+id/slname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="신라 스테이 광화문" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView58"
+                        android:id="@+id/slfee"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="가격: 200,000원" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView59"
+                        android:id="@+id/slstar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="평점(5점): 4.5점" />
+                        android:gravity="center_horizontal" />
                 </LinearLayout>
 
             </LinearLayout>
 
             <CheckBox
-                android:id="@+id/checkBox2"
+                android:id="@+id/checkora"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2.오카카이 호텔" />
@@ -111,36 +108,33 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView37"
+                        android:id="@+id/okname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="오라카이 대학로 호텔" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView39"
+                        android:id="@+id/okfee"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="가격:180,000원" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView40"
+                        android:id="@+id/okstar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="평점(5점): 4.3점" />
+                        android:gravity="center_horizontal" />
                 </LinearLayout>
             </LinearLayout>
 
             <CheckBox
-                android:id="@+id/checkBox3"
+                android:id="@+id/checkcm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3.센터 마크 호탤" />
@@ -163,37 +157,34 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView45"
+                        android:id="@+id/cmname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="센터 마크 호텔" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView47"
+                        android:id="@+id/cmfee"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="가격: 220,000원" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView48"
+                        android:id="@+id/cmstar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="평점(5점): 3.8점" />
+                        android:gravity="center_horizontal" />
                 </LinearLayout>
 
             </LinearLayout>
 
             <CheckBox
-                android:id="@+id/checkBox4"
+                android:id="@+id/checkms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4.메이플 레이스 호탤" />
@@ -218,31 +209,28 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView52"
+                        android:id="@+id/mpname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="메이플 레이스 호텔" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView54"
+                        android:id="@+id/mpfee"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="가격: 170,000원" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView55"
+                        android:id="@+id/mpstar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="평점(5점): 4.5점" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
             </LinearLayout>

@@ -44,11 +44,7 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".CourseActivity"
-            android:label="Map">
-
-        </activity>
+        <activity android:name=".CourseActivity" android:label="Map"></activity>
 
     </application>
 

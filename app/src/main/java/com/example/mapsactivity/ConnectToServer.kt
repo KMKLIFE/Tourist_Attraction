@@ -47,7 +47,7 @@ class ConnectToServer {
             if (name == "tripSpotId") {
                 tripspot.TripSpotId= reader.nextInt()
             } else if (name == "category") {
-                tripspot.Categoy = reader.nextString()
+                tripspot.Category = reader.nextString()
             } else if (name == "name" ) {
                 tripspot.Name = reader.nextString()
             } else if (name == "locationId") {

@@ -36,11 +36,12 @@ class CourseActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var locationRequest: LocationRequest
     private lateinit var locationCallback: LocationCallback
     private val polylineOptions = PolylineOptions().width(5f).color(Color.RED)
+    var resultCourse = ArrayList<TripSpotVO>()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val tripspotList = intent.getSerializableExtra("list") as ArrayList<TripSpotVO>
+        val tripspots = intent.getSerializableExtra("list") as ArrayList<TripSpotVO>
 
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
@@ -52,28 +53,32 @@ class CourseActivity : AppCompatActivity(), OnMapReadyCallback {
         mapFragment.getMapAsync(this)
         locationInit()
 
-        val nodeList = getNodes()
-        val resultList = getCourse(nodeList)
+
+        val resultList = getCourse(tripspots)
         showCourse( resultList)
 
-        for(i in 0..tripspotList.size-1)
+        for(i in 0 until tripspots.size)
         {
-            Log.d("CourseActivity",(tripspotList[i].Name)+"|||||"+tripspotList[i].Categoy)
+            Log.d("CourseActivity",(tripspots[i].Name)+"|||||"+tripspots[i].Category)
+        }
+
+        for( i in 0 until tripspots.size){
+            Log.d("list","list index:" + i +" " + tripspots[i].isChecked.toString())
         }
 
 
+        resultCourse = getCourse(tripspots)
+        showCourse(resultCourse)
 
-
-        //ConnectToServer().getHotelList()
 
 
 
 
     }
 
-    private fun showCourse(resultList: ArrayList<String>) {
-        //val size = resultList.size
-        val size = 2
+    private fun showCourse(resultList: ArrayList<TripSpotVO>) {
+        val size = resultList.size
+
 
         layout1.visibility = View.INVISIBLE
         layout2.visibility = View.INVISIBLE
@@ -86,51 +91,103 @@ class CourseActivity : AppCompatActivity(), OnMapReadyCallback {
         layout9.visibility = View.INVISIBLE
 
         when(size){
-            0->return
             1->{
                 layout1.visibility = View.VISIBLE
-                location1.setImageResource(R.drawable.oracai)
-                locatiionText1.text = "오라카이"
+                location1.setImageResource(getImg(resultList[0].Name))
+                locatiionText1.text = resultList[0].Name
             }
             2->{
                 layout1.visibility = View.VISIBLE
-                location1.setImageResource(R.drawable.oracai)
-                locatiionText1.text = "오라카이"
+                location1.setImageResource(getImg(resultList[0].Name))
+                locatiionText1.text = resultList[0].Name
                 layout2.visibility = View.VISIBLE
                 layout3.visibility = View.VISIBLE
-                location2.setImageResource(R.drawable.oracai)
-                locatiionText2.text = "오라카이2"
+                location2.setImageResource(getImg(resultList[1].Name))
+                locatiionText2.text = resultList[1].Name
+            }
+            3->{
+                layout1.visibility = View.VISIBLE
+                location1.setImageResource(getImg(resultList[0].Name))
+                locatiionText1.text = resultList[0].Name
+                layout2.visibility = View.VISIBLE
+                layout3.visibility = View.VISIBLE
+                location2.setImageResource(getImg(resultList[1].Name))
+                locatiionText2.text = resultList[1].Name
+                layout4.visibility = View.VISIBLE
+                layout5.visibility = View.VISIBLE
+                location3.setImageResource(getImg(resultList[2].Name))
+                locatiionText3.text = resultList[2].Name
+            }
+            4->{
+                layout1.visibility = View.VISIBLE
+                location1.setImageResource(getImg(resultList[0].Name))
+                locatiionText1.text = resultList[0].Name
+                layout2.visibility = View.VISIBLE
+                layout3.visibility = View.VISIBLE
+                location2.setImageResource(getImg(resultList[1].Name))
+                locatiionText2.text = resultList[1].Name
+                layout4.visibility = View.VISIBLE
+                layout5.visibility = View.VISIBLE
+                location3.setImageResource(getImg(resultList[2].Name))
+                locatiionText3.text = resultList[2].Name
+                layout6.visibility = View.VISIBLE
+                layout7.visibility = View.VISIBLE
+                location4.setImageResource(getImg(resultList[3].Name))
+                locatiionText4.text = resultList[3].Name
+            }
+            5->{
+                layout1.visibility = View.VISIBLE
+                location1.setImageResource(getImg(resultList[0].Name))
+                locatiionText1.text = resultList[0].Name
+                layout2.visibility = View.VISIBLE
+                layout3.visibility = View.VISIBLE
+                location2.setImageResource(getImg(resultList[1].Name))
+                locatiionText2.text = resultList[1].Name
+                layout4.visibility = View.VISIBLE
+                layout5.visibility = View.VISIBLE
+                location3.setImageResource(getImg(resultList[2].Name))
+                locatiionText3.text = resultList[2].Name
+                layout6.visibility = View.VISIBLE
+                layout7.visibility = View.VISIBLE
+                location4.setImageResource(getImg(resultList[3].Name))
+                locatiionText4.text = resultList[3].Name
+                layout8.visibility = View.VISIBLE
+                layout9.visibility = View.VISIBLE
+                location5.setImageResource(getImg(resultList[4].Name))
+                locatiionText5.text = resultList[4].Name
+            }
+            else-> return
+        }
+    }
 
+    private fun getImg( name: String): Int {
+        when (name) {
+            "경복궁" -> return R.drawable.gyeongbokgung
+            "국립박물관" -> return R.drawable.folkmuseum
+            "청계천" -> return R.drawable.heonggyecheon
+            "낙상공원" -> return R.drawable.naksangpark
+            "신라호텔" -> return R.drawable.sinrastay
+            "오라카이 호텔" -> return R.drawable.oracai
+            "센터마크 호텔" -> return R.drawable.centermark
+            "메이플 호텔" -> return R.drawable.maple
+            else->return 0
+        }
+    }
+
+    private fun getCourse(nodeList: ArrayList<TripSpotVO>): ArrayList<TripSpotVO> {
+        val resultList = ArrayList<TripSpotVO>()
+
+        //알고리즘 수행
+        for( i in 0 until nodeList.size ){
+            if( nodeList[i].isChecked){
+                resultList.add(nodeList[i])
             }
         }
 
-
-    }
-
-    private fun getCourse(nodeList: ArrayList<String>): ArrayList<String> {
-        val resultList = ArrayList<String>()
-
-
-
-
-        resultList.add(nodeList[0])
-        resultList.add(nodeList[2])
-        resultList.add(nodeList[1])
-        resultList.add(nodeList[3])
         return resultList
     }
 
-    private fun getNodes(): ArrayList<String> {
-        val nodeList = ArrayList<String>()
 
-        nodeList.add("지역1")
-        nodeList.add("지역3")
-        nodeList.add("지역2")
-        nodeList.add("지역4")
-
-
-        return nodeList
-    }
 
     /**
      * Manipulates the map once available.
@@ -149,8 +206,6 @@ class CourseActivity : AppCompatActivity(), OnMapReadyCallback {
         //val sydney = LatLng(37.561542, 126.817357)
         mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
-        //mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(sydney, 13f))
-        //onResume()
     }
 
     private fun locationInit(){
@@ -196,13 +251,13 @@ class CourseActivity : AppCompatActivity(), OnMapReadyCallback {
             val location = locationResult?.lastLocation
             location?.run {
                 //val latLng = LatLng(latitude, longitude)
-                latitude = 37.561542
-                longitude = 126.817357
+                latitude = resultCourse[0].Coordinate_x / 1000000.0
+                longitude = resultCourse[0].Coordinate_y / 1000000.0
                 val latLng = LatLng(latitude, longitude)
 
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 13f))
                 makeMoveLine()
-                //Log.d("CourseActivity", "위도: $latitude, 경도: $longitude")
+                Log.d("CourseActivity", "위도: $latitude, 경도: $longitude")
             }
         }
     }
@@ -210,13 +265,11 @@ class CourseActivity : AppCompatActivity(), OnMapReadyCallback {
     private fun makeMoveLine(){
         var node = LatLng(0.0,0.0)
 
-        node = LatLng( 37.561, 126.817)
-        polylineOptions.add(node)
-        node = LatLng( 37.581, 126.817)
-        polylineOptions.add(node)
-        node = LatLng( 37.581, 126.837)
-        polylineOptions.add(node)
-        mMap.addPolyline(polylineOptions)
+        for( i in 0 until resultCourse.size ){
+            node = LatLng( resultCourse[i].Coordinate_x / 1000000.0, resultCourse[i].Coordinate_y / 1000000.0)
+            polylineOptions.add(node)
+            mMap.addMarker(MarkerOptions().position(node).title(resultCourse[i].Name))
+        }
     }
 
     private val REQUEST_ACCESS_FINE_LOCATION = 1000

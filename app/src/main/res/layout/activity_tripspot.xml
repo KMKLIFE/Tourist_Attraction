@@ -73,7 +73,7 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/checkBox5"
+                android:id="@+id/checkgbg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1.경복궁" />
@@ -102,45 +102,41 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/gyeongbokgung"
+                        android:id="@+id/gbgname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="경복궁" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView4"
+                        android:id="@+id/gbgtime"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="운영시간: 09:00 ~ 20:00" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView5"
+                        android:id="@+id/gbgfee"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="입장료: 5000원(대인) /        소인(1500원)" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView6"
+                        android:id="@+id/gbgstar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="평점(5점): 4.3점" />
+                        android:gravity="center_horizontal" />
                 </LinearLayout>
             </LinearLayout>
 
             <CheckBox
-                android:id="@+id/checkBox6"
+                android:id="@+id/checkgm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2.국립 민속 박물관" />
@@ -163,45 +159,41 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView37"
+                        android:id="@+id/gmname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="국립 민속 박물관" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView38"
+                        android:id="@+id/gmtime"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="운영시간: 09:00 ~ 18:00" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView39"
+                        android:id="@+id/gmfee"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="입장료: 무료" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView40"
+                        android:id="@+id/gmstar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="평점(5점): 4.3점" />
+                        android:gravity="center_horizontal" />
                 </LinearLayout>
             </LinearLayout>
 
             <CheckBox
-                android:id="@+id/checkBox7"
+                android:id="@+id/checkcgc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3.청계천" />
@@ -224,46 +216,42 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView45"
+                        android:id="@+id/cgcname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="청계천" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView46"
+                        android:id="@+id/cgctime"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="운영시간:00:00 ~ 24:00" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView47"
+                        android:id="@+id/cgcfee"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="입장료: 무료" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView48"
+                        android:id="@+id/cgcstar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="평점(5점): 3.8점" />
+                        android:gravity="center_horizontal" />
                 </LinearLayout>
 
             </LinearLayout>
 
             <CheckBox
-                android:id="@+id/checkBox8"
+                android:id="@+id/checkng"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4.낙상공원" />
@@ -288,40 +276,36 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView52"
+                        android:id="@+id/ngname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="낙상공원" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView53"
+                        android:id="@+id/ngtime"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="운영시간:09:00 ~ 23:00" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView54"
+                        android:id="@+id/ngfee"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="입장료: 무료" />
+                        android:gravity="center_horizontal" />
 
                     <TextView
-                        android:id="@+id/textView55"
+                        android:id="@+id/ngstar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#00000000"
-                        android:gravity="center_horizontal"
-                        android:text="평점(5점): 4.5점" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
             </LinearLayout>

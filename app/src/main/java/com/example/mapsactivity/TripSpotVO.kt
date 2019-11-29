@@ -4,7 +4,7 @@ import java.io.Serializable
 
 class TripSpotVO : Serializable{
     var TripSpotId = 0
-    var Categoy = ""
+    var Category = ""
     var Name = ""
     var LocationId = 0
     var OpenTime = ""
